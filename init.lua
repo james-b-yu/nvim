@@ -14,3 +14,10 @@ vim.keymap.set({'n', 'v'}, '<leader>x', '"+x', opts)
 vim.keymap.set('n', '<C-s>', ':w<CR><enter>', { noremap = true, silent = true })
 vim.keymap.set('i', '<C-s>', '<Esc>:w<CR>a<enter>', { noremap = true, silent = true })
 vim.keymap.set('v', '<C-s>', ':w<CR><enter>', { noremap = true, silent = true })
+-- fix search
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+vim.opt.magic = true
+vim.keymap.set('n', '/', '/\\v', { noremap = true })
+vim.keymap.set('n', '?', '?\\v', { noremap = true })
+vim.keymap.set('c', 's/', 's/\\v', { noremap = true })
